@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>redBus — Bus Ticket Booking with Red Pass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#F5F6F8] text-[#263238] antialiased selection:bg-red-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      try {
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'streamlit:componentReady', apiVersion: 1 }, '*');
+          const notifyHeight = () => {
+            const h = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, 900);
+            window.parent.postMessage({ type: 'streamlit:setFrameHeight', height: h }, '*');
+          };
+          window.addEventListener('load', notifyHeight);
+          window.addEventListener('resize', notifyHeight);
+          setInterval(notifyHeight, 1000);
+        }
+      } catch (e) {}
+    </script>
+  </body>
+</html>
