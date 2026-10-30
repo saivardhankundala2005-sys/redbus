@@ -94,6 +94,9 @@ export const RedPassDiscoverySection: React.FC = () => {
               <div className="text-[10px] text-slate-400">
                 Save vs ~₹450 fare
               </div>
+              <div className="text-[9px] text-emerald-700 font-semibold">
+                Auto-resets every 3 rides (MVP)
+              </div>
             </div>
 
             <div className="flex flex-col gap-1.5">

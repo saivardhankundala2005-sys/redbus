@@ -96,6 +96,7 @@ interface AppContextType {
   };
   resetDemo: () => void;
   preloadDemoState: () => void;
+  resetPassRides: () => void;
   toastMessage: string | null;
   showToast: (msg: string) => void;
 }
@@ -372,13 +373,25 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       })
     );
 
-    // If Red Pass was redeemed, debit 1 ride atomically
+    const willAutoReset = bookingJourneyType === 'red_pass' && activePass && activePass.remainingRides <= 1;
+
+    // If Red Pass was redeemed, debit 1 ride atomically (resets to 3 upon completing 3 rides for MVP)
     if (bookingJourneyType === 'red_pass' && activePass) {
       setActivePass((prev) => {
         if (!prev) return null;
+        const newRemaining = prev.remainingRides - 1;
+        if (newRemaining <= 0) {
+          // MVP continuous cycle: auto-reset to full 3 rides!
+          return {
+            ...prev,
+            remainingRides: 3,
+            ridesUsed: 0,
+            cancellationsUsed: 0,
+          };
+        }
         return {
           ...prev,
-          remainingRides: Math.max(0, prev.remainingRides - 1),
+          remainingRides: newRemaining,
           ridesUsed: prev.ridesUsed + 1,
         };
       });
@@ -404,7 +417,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     showToast(
       bookingJourneyType === 'red_pass'
-        ? `Red Pass ride confirmed! 1 ride redeemed for ${selectedDeparture.operatorName} (${selectedSeats[0]?.seatNumber}).`
+        ? willAutoReset
+          ? `🎉 3rd ride used! Red Pass auto-reset to 3 rides for continuous MVP testing.`
+          : `Red Pass ride confirmed! 1 ride redeemed for ${selectedDeparture.operatorName} (${selectedSeats[0]?.seatNumber}).`
         : `Booking confirmed! PNR: ${newBooking.bookingRef}`
     );
 
@@ -717,6 +732,20 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     showToast('Sample Red Pass (2 rides left) & upcoming booking preloaded!');
   };
 
+  // Reset pass balance to 3 rides (MVP continuous testing)
+  const resetPassRides = () => {
+    setActivePass((prev) => {
+      if (!prev) return JSON.parse(JSON.stringify(SAMPLE_ACTIVE_PASS));
+      return {
+        ...prev,
+        remainingRides: 3,
+        ridesUsed: 0,
+        cancellationsUsed: 0,
+      };
+    });
+    showToast('🔄 Red Pass balance reset to 3 rides (MVP Mode)!');
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -781,6 +810,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         stats,
         resetDemo,
         preloadDemoState,
+        resetPassRides,
         toastMessage,
         showToast,
       }}

@@ -12,6 +12,7 @@ export const DemoControlsDrawer: React.FC = () => {
     stats,
     resetDemo,
     preloadDemoState,
+    resetPassRides,
     viewMode,
     toggleViewMode,
     setIsStudentModalOpen,
@@ -210,6 +211,23 @@ export const DemoControlsDrawer: React.FC = () => {
                   <div>
                     <span>Simulate Conductor QR Scan</span>
                     <span className="text-[10px] text-slate-500 font-normal block">Increments loyalty boarding progress</span>
+                  </div>
+                </div>
+                <ArrowRightIcon />
+              </button>
+
+              <button
+                onClick={() => {
+                  resetPassRides();
+                  setIsDemoControlsOpen(false);
+                }}
+                className="w-full text-left p-3 rounded-xl bg-slate-50 hover:bg-amber-50 hover:border-amber-200 border border-slate-200 text-xs font-bold text-slate-800 transition flex items-center justify-between"
+              >
+                <div className="flex items-center space-x-2">
+                  <span className="text-base">🔄</span>
+                  <div>
+                    <span>Reset Pass to 3 Rides</span>
+                    <span className="text-[10px] text-slate-500 font-normal block">MVP continuous testing: top-up balance instantly</span>
                   </div>
                 </div>
                 <ArrowRightIcon />

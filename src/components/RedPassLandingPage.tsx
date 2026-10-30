@@ -286,10 +286,10 @@ export const RedPassLandingPage: React.FC = () => {
           <div className="space-y-1.5">
             <div className="font-bold text-slate-800 flex items-center">
               <Ticket className="w-4 h-4 mr-1 text-slate-500" />
-              Ride Re-Credit Policy
+              Ride Re-Credit & MVP Auto-Renewal
             </div>
             <p>
-              Cancelling up to 1 hour before departure re-credits 1 ride directly back into your pack. (Max 2 free cancellations per pack. No cash refunds).
+              Cancelling up to 1 hour before departure re-credits 1 ride back into your pack. In MVP mode, after redeeming every 3 rides, the pass automatically resets to 3 rides for continuous testing.
             </p>
           </div>
 

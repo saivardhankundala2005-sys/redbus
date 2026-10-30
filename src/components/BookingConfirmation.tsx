@@ -64,7 +64,11 @@ export const BookingConfirmation: React.FC = () => {
                 <div>
                   <span className="text-sm font-bold text-red-900 block">Red Pass Ride Redeemed</span>
                   <span className="text-xs text-slate-600">
-                    {activePass ? `${activePass.remainingRides} rides remaining in your pack` : 'Ride debited from pack'}
+                    {activePass
+                      ? activePass.remainingRides === 3
+                        ? '3 rides ready in pack (Auto-reset after 3rd ride used for MVP testing)'
+                        : `${activePass.remainingRides} rides remaining in your pack`
+                      : 'Ride debited from pack'}
                   </span>
                 </div>
               </div>

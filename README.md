@@ -44,6 +44,9 @@ The app automatically serves the complete high-fidelity React frontend with full
 6. **Native Mobile Chassis & Responsive Desktop View**:
    - Toggle seamlessly between full desktop web view and mobile phone simulator (iPhone Pro Max chassis with customizable heights).
 
+7. **MVP Continuous Evaluation Loop (3-Ride Auto-Reset)**:
+   - After using every 3 rides of the pass, the balance automatically resets to 3 rides for uninterrupted testing and continuous walkthroughs.
+
 ---
 
 ## 🛠️ Local Development & Running

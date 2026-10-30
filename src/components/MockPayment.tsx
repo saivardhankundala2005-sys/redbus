@@ -109,7 +109,9 @@ export const MockPayment: React.FC = () => {
               <div>
                 <span className="text-sm font-bold text-red-900 block">Red Pass Ride Deduction</span>
                 <span className="text-xs text-slate-600">
-                  1 ride will be debited from your active pack ({activePass?.remainingRides} remaining).
+                  {activePass && activePass.remainingRides <= 1
+                    ? 'Final ride of cycle: 1 ride debited and pass will automatically reset to 3 rides (MVP Mode).'
+                    : `1 ride will be debited from your active pack (${activePass?.remainingRides} remaining).`}
                 </span>
               </div>
             </div>
