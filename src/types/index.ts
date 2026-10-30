@@ -55,7 +55,7 @@ export interface RedPassPack {
   totalRides: number;
   remainingRides: number;
   ridesUsed: number;
-  packPrice: number;     // 4000, 4100, or 3800
+  packPrice: number;     // 1200, 1230, or 1140
   effectivePerRide: number;
   purchaseDate: string;
   expiryDate: string;
@@ -110,6 +110,6 @@ export interface LoyaltyReward {
   }[];
 }
 
-export type PricingArm = 'standard_4000' | 'parity_4100' | 'student_3800';
+export type PricingArm = 'standard_1200' | 'parity_1230' | 'student_1140';
 export type ActiveTab = 'home' | 'search' | 'seat-select' | 'passenger' | 'payment' | 'confirmation' | 'red-pass-explore' | 'red-pass-checkout' | 'wallet' | 'manage-bookings' | 'account';
 export type ViewMode = 'desktop' | 'mobile_frame';

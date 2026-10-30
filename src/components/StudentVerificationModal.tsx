@@ -46,7 +46,7 @@ export const StudentVerificationModal: React.FC = () => {
         </div>
 
         <p className="text-xs text-slate-600 mb-4 leading-relaxed">
-          Unlock the discounted <strong>Campus Red Pass (10 rides for ₹3,800)</strong>. Verification is limited to active enrolled college students (max 2 packs per semester).
+          Unlock the discounted <strong>Campus Red Pass (3 rides for ₹1,140)</strong>. Verification is limited to active enrolled college students (max 2 packs per semester).
         </p>
 
         <form onSubmit={handleVerify} className="space-y-4">

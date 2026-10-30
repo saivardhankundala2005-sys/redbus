@@ -119,7 +119,7 @@ export const HomePage: React.FC = () => {
                   Student Special
                 </span>
                 <h4 className="text-sm font-extrabold leading-tight">Campus Red Pass</h4>
-                <p className="text-[10px] text-amber-100">10 rides for ₹3,800 (Save 16%)</p>
+                <p className="text-[10px] text-amber-100">3 rides for ₹1,140 (Save 16%)</p>
                 <div className="pt-0.5 text-[10px] font-bold underline flex items-center">
                   <span>Verify Student ID</span>
                   <ChevronRight className="w-3 h-3 ml-0.5" />

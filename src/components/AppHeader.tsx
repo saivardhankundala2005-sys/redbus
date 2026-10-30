@@ -33,9 +33,9 @@ export const AppHeader: React.FC = () => {
           <div className="hidden md:flex items-center space-x-1.5 text-[11px] bg-slate-800 px-2 py-0.5 rounded text-amber-300 border border-slate-700">
             <span>Price Arm:</span>
             <span className="font-bold">
-              {pricingArm === 'standard_4000' && '₹4,000 Standard'}
-              {pricingArm === 'parity_4100' && '₹4,100 Parity'}
-              {pricingArm === 'student_3800' && '₹3,800 Campus'}
+              {pricingArm === 'standard_1200' && '₹1,200 Standard'}
+              {pricingArm === 'parity_1230' && '₹1,230 Parity'}
+              {pricingArm === 'student_1140' && '₹1,140 Campus'}
             </span>
           </div>
 
@@ -119,7 +119,7 @@ export const AppHeader: React.FC = () => {
                 <span>Red Pass</span>
                 <span className="ml-1 inline-flex items-center px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
                   <Sparkles className="w-2.5 h-2.5 mr-0.5 text-amber-600" />
-                  10 Rides
+                  3 Rides
                 </span>
               </button>
 

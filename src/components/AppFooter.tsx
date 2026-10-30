@@ -39,7 +39,7 @@ export const AppFooter: React.FC = () => {
               </li>
               <li>
                 <button onClick={() => setActiveTab('red-pass-explore')} className="hover:text-white transition text-red-400 font-semibold">
-                  Red Pass 10-Ride Packs
+                  Red Pass 3-Ride Packs
                 </button>
               </li>
               <li>

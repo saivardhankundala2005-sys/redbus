@@ -126,7 +126,7 @@ export const ResultsPage: React.FC = () => {
             <p className="text-[11px] text-red-100 mt-0.5 leading-snug">
               {activePass
                 ? `Active Red Pass: ${activePass.remainingRides} rides left. Tap 'Use Pass' on any eligible departure.`
-                : `Travel this route often? 10 prepaid rides at ₹${getPerRidePrice()}/ride with guaranteed seat selection.`}
+                : `Travel this route often? 3 prepaid rides at ₹${getPerRidePrice()}/ride with guaranteed seat selection.`}
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export const ResultsPage: React.FC = () => {
               onClick={() => setActiveTab('red-pass-explore')}
               className="w-full sm:w-auto px-3 py-1.5 bg-white text-redbus-600 font-bold text-[11px] rounded-lg shadow-xs hover:bg-red-50 transition"
             >
-              Get 10-Ride Pass
+              Get 3-Ride Pass
             </button>
           )}
         </div>

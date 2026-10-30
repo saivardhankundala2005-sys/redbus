@@ -27,7 +27,7 @@ export const DemoControlsDrawer: React.FC = () => {
   const handleArmChange = (arm: PricingArm) => {
     setPricingArm(arm);
     showToast(`Experiment pricing arm switched to: ${
-      arm === 'standard_4000' ? '₹4,000 Standard Pack' : arm === 'parity_4100' ? '₹4,100 Parity Arm' : '₹3,800 Student Offer'
+      arm === 'standard_1200' ? '₹1,200 Standard Pack' : arm === 'parity_1230' ? '₹1,230 Parity Arm' : '₹1,140 Student Offer'
     }`);
   };
 
@@ -116,21 +116,21 @@ export const DemoControlsDrawer: React.FC = () => {
             <div className="space-y-2">
               {[
                 {
-                  id: 'standard_4000',
-                  name: 'Arm 1: Standard ₹4,000',
-                  price: '₹4,000 / 10 rides',
+                  id: 'standard_1200',
+                  name: 'Arm 1: Standard ₹1,200',
+                  price: '₹1,200 / 3 rides',
                   sub: '₹400 / ride (~12% discount incentive)',
                 },
                 {
-                  id: 'parity_4100',
-                  name: 'Arm 2: Price-Parity ₹4,100',
-                  price: '₹4,100 / 10 rides',
+                  id: 'parity_1230',
+                  name: 'Arm 2: Price-Parity ₹1,230',
+                  price: '₹1,230 / 3 rides',
                   sub: '₹410 / ride (Exact match to single-ticket fare)',
                 },
                 {
-                  id: 'student_3800',
-                  name: 'Arm 3: Campus Student ₹3,800',
-                  price: '₹3,800 / 10 rides',
+                  id: 'student_1140',
+                  name: 'Arm 3: Campus Student ₹1,140',
+                  price: '₹1,140 / 3 rides',
                   sub: '₹380 / ride (Gated by student verification)',
                 },
               ].map((arm) => (
@@ -178,7 +178,7 @@ export const DemoControlsDrawer: React.FC = () => {
                   <span className="text-base">🎟️</span>
                   <div>
                     <span>Jump to Active Pass Wallet</span>
-                    <span className="text-[10px] text-slate-500 font-normal block">Preloads 8 rides balance and upcoming ride</span>
+                    <span className="text-[10px] text-slate-500 font-normal block">Preloads 2 rides balance and upcoming ride</span>
                   </div>
                 </div>
                 <ArrowRightIcon />

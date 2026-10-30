@@ -102,7 +102,7 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
-const LOCAL_STORAGE_KEY = 'redbus_redpass_mvp_state_v1';
+const LOCAL_STORAGE_KEY = 'redbus_redpass_mvp_state_v2';
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Navigation & View
@@ -116,8 +116,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [destination, setDestination] = useState<string>('Hyderabad');
   const [travelDate, setTravelDate] = useState<string>('Tomorrow, 16 Nov');
 
-  // Pricing Experiment ('standard_4000' | 'parity_4100' | 'student_3800')
-  const [pricingArm, setPricingArm] = useState<PricingArm>('standard_4000');
+  // Pricing Experiment ('standard_1200' | 'parity_1230' | 'student_1140')
+  const [pricingArm, setPricingArm] = useState<PricingArm>('standard_1200');
 
   // Operators & Inventory
   const [operatorGroups, setOperatorGroups] = useState<OperatorGroup[]>(() => {
@@ -217,11 +217,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   };
 
   const getStandardPassPrice = () => {
-    return pricingArm === 'parity_4100' ? 4100 : 4000;
+    return pricingArm === 'parity_1230' ? 1230 : 1200;
   };
 
   const getPerRidePrice = () => {
-    return pricingArm === 'parity_4100' ? 410 : 400;
+    return pricingArm === 'parity_1230' ? 410 : 400;
   };
 
   // Seat toggle logic
@@ -263,22 +263,22 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Purchase Red Pass
   const purchasePass = (type: 'standard' | 'student', studentData?: { college: string; roll: string }): boolean => {
-    const price = type === 'student' ? 3800 : getStandardPassPrice();
+    const price = type === 'student' ? 1140 : getStandardPassPrice();
     const effectiveRide = type === 'student' ? 380 : getPerRidePrice();
 
     const newPass: RedPassPack = {
       id: `RP-${Math.floor(10000 + Math.random() * 90000)}`,
       packType: type,
-      totalRides: 10,
-      remainingRides: 10,
+      totalRides: 3,
+      remainingRides: 3,
       ridesUsed: 0,
       packPrice: price,
       effectivePerRide: effectiveRide,
       purchaseDate: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
-      expiryDate: '90 Days from today (Proposed)',
+      expiryDate: '30 Days from today (Proposed)',
       routeCorridor: `${source} ⇄ ${destination}`,
       cancellationsUsed: 0,
-      maxCancellations: 2,
+      maxCancellations: 1,
       swapsUsed: 0,
       maxSwapsPerRide: 3,
       isVerifiedStudent: type === 'student',
@@ -299,7 +299,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       origin: { y: 0.6 },
     });
 
-    showToast(`Red Pass (${type === 'student' ? 'Campus Student' : 'Standard'}) activated! 10 rides ready.`);
+    showToast(`Red Pass (${type === 'student' ? 'Campus Student' : 'Standard'}) activated! 3 rides ready.`);
     return true;
   };
 
@@ -714,7 +714,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       scannedBoardingsCount: 0,
       vouchersEarnedCount: 0,
     });
-    showToast('Sample Red Pass (8 rides left) & upcoming booking preloaded!');
+    showToast('Sample Red Pass (2 rides left) & upcoming booking preloaded!');
   };
 
   return (

@@ -37,9 +37,9 @@ The app automatically serves the complete high-fidelity React frontend with full
 
 5. **A/B Pricing Experimentation Engine**:
    - Built-in live toggle between 3 pricing arms:
-     - **₹4,000 Standard** (₹400/ride, 12% discount)
-     - **₹4,100 Parity** (₹410/ride, breakeven benchmark)
-     - **₹3,800 Campus Student Pass** (₹380/ride, 16% discount with student ID verification modal)
+     - **₹1,200 Standard** (₹400/ride, 12% discount)
+     - **₹1,230 Parity** (₹410/ride, breakeven benchmark)
+     - **₹1,140 Campus Student Pass** (₹380/ride, 16% discount with student ID verification modal)
 
 6. **Native Mobile Chassis & Responsive Desktop View**:
    - Toggle seamlessly between full desktop web view and mobile phone simulator (iPhone Pro Max chassis with customizable heights).

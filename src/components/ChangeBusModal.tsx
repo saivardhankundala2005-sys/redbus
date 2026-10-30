@@ -159,7 +159,7 @@ export const ChangeBusModal: React.FC = () => {
         <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-xl text-[11px] text-amber-900 mb-5 flex items-start space-x-2">
           <ShieldCheck className="w-4 h-4 text-amber-700 flex-shrink-0 mt-0.5" />
           <span>
-            <strong>Atomic Swap Guarantee:</strong> Your original seat is released only upon successful confirmation of the new departure. Your 10-ride pass balance remains untouched.
+            <strong>Atomic Swap Guarantee:</strong> Your original seat is released only upon successful confirmation of the new departure. Your 3-ride pass balance remains untouched.
           </span>
         </div>
 

@@ -141,9 +141,9 @@ const AppContent: React.FC = () => {
             <div className="bg-slate-800 text-amber-300 border border-slate-700 px-3 py-1.5 rounded-xl font-bold flex items-center space-x-1.5">
               <span className="text-slate-400 font-normal">Arm:</span>
               <span>
-                {pricingArm === 'standard_4000' && '₹4,000 Standard'}
-                {pricingArm === 'parity_4100' && '₹4,100 Parity'}
-                {pricingArm === 'student_3800' && '₹3,800 Student'}
+                {pricingArm === 'standard_1200' && '₹1,200 Standard'}
+                {pricingArm === 'parity_1230' && '₹1,230 Parity'}
+                {pricingArm === 'student_1140' && '₹1,140 Student'}
               </span>
             </div>
 

@@ -62,7 +62,7 @@ export const MobileAppHeader: React.FC = () => {
       case 'confirmation':
         return 'Booking Confirmed';
       case 'red-pass-explore':
-        return 'Red Pass — 10 Ride Pack';
+        return 'Red Pass — 3 Ride Pack';
       case 'wallet':
         return 'Red Pass Wallet';
       case 'manage-bookings':
@@ -206,7 +206,7 @@ export const MobileAppHeader: React.FC = () => {
             <Ticket className="w-3.5 h-3.5 text-amber-300" />
             <span>Red Pass</span>
             <span className="text-[9px] bg-amber-400 text-slate-900 px-1 rounded-sm font-black ml-0.5">
-              10 Rides
+              3 Rides
             </span>
           </button>
 

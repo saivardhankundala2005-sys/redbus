@@ -37,7 +37,7 @@ export const RedPassDiscoverySection: React.FC = () => {
               </span>
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
                 <CheckCircle2 className="w-2.5 h-2.5 mr-1 text-emerald-600" />
-                Your Bus • Your Seat • 10 Rides
+                Your Bus • Your Seat • 3 Rides
               </span>
               {isWarangalCorridor && (
                 <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-amber-100 text-amber-900 border border-amber-200">
@@ -51,7 +51,7 @@ export const RedPassDiscoverySection: React.FC = () => {
               Your regular route? <span className="text-redbus-500">Make every ride count.</span>
             </h3>
             <p className="mt-1 text-slate-600 text-xs leading-relaxed">
-              10 prepaid rides with total flexibility to select your favorite operator, departure time, and confirmed seat on every trip.
+              3 prepaid rides with total flexibility to select your favorite operator, departure time, and confirmed seat on every trip.
             </p>
 
             {/* Core Value Pillars */}
@@ -74,7 +74,7 @@ export const RedPassDiscoverySection: React.FC = () => {
             <div className="mt-2.5 inline-flex items-center space-x-1.5 px-2.5 py-1 bg-amber-50 border border-amber-200 rounded-lg text-[11px] text-amber-900 w-full sm:w-auto">
               <GraduationCap className="w-3.5 h-3.5 text-amber-700 flex-shrink-0" />
               <span>
-                <strong>Campus Red Pass:</strong> Verified students get 10 rides for <strong>₹3,800</strong>.
+                <strong>Campus Red Pass:</strong> Verified students get 3 rides for <strong>₹1,140</strong>.
               </span>
             </div>
           </div>
@@ -83,7 +83,7 @@ export const RedPassDiscoverySection: React.FC = () => {
           <div className={`${isMobileView ? 'w-full' : 'w-full lg:w-auto'} flex-shrink-0 bg-white/90 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-red-100 shadow-xs flex flex-row ${isMobileView ? 'items-center justify-between' : 'lg:flex-col lg:items-end justify-between'} gap-3`}>
             <div>
               <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                10-Ride Pack
+                3-Ride Pack
               </div>
               <div className="flex items-baseline space-x-1.5">
                 <span className="text-xl sm:text-2xl font-black text-slate-900">₹{standardPrice.toLocaleString('en-IN')}</span>

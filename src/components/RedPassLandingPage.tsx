@@ -46,7 +46,7 @@ export const RedPassLandingPage: React.FC = () => {
             RED PASS
           </h1>
           <p className="text-xl sm:text-2xl font-bold text-red-100 mt-2">
-            10 prepaid rides. Your bus. Your seat. Total flexibility.
+            3 prepaid rides. Your bus. Your seat. Total flexibility.
           </p>
           <p className="text-sm sm:text-base text-red-100/90 mt-3 leading-relaxed max-w-2xl">
             Never face bus stop anxiety again. Book your favorite operator, pick your exact seat, and enjoy free bus changes up to 1 hour before departure.
@@ -57,7 +57,7 @@ export const RedPassLandingPage: React.FC = () => {
               onClick={handleBuyStandard}
               className="px-6 py-3.5 bg-white text-redbus-600 hover:bg-red-50 font-extrabold text-sm rounded-xl shadow-md transition flex items-center space-x-2"
             >
-              <span>Buy 10-Ride Pack (₹{standardPrice.toLocaleString('en-IN')})</span>
+              <span>Buy 3-Ride Pack (₹{standardPrice.toLocaleString('en-IN')})</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -168,7 +168,7 @@ export const RedPassLandingPage: React.FC = () => {
               <div className="my-6 pb-6 border-b border-slate-100">
                 <div className="flex items-baseline space-x-2">
                   <span className="text-4xl font-black text-slate-900">₹{standardPrice.toLocaleString('en-IN')}</span>
-                  <span className="text-xs font-bold text-slate-400">/ 10 rides</span>
+                  <span className="text-xs font-bold text-slate-400">/ 3 rides</span>
                 </div>
                 <div className="mt-2 text-xs font-semibold text-emerald-600 bg-emerald-50 inline-block px-2.5 py-1 rounded-md border border-emerald-200">
                   ₹{perRidePrice} effective fare per ride (Save up to 12%)
@@ -178,7 +178,7 @@ export const RedPassLandingPage: React.FC = () => {
               <ul className="space-y-3 text-xs text-slate-600 mb-6">
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span><strong>10 Prepaid Rides:</strong> Valid for 90 days from purchase</span>
+                  <span><strong>3 Prepaid Rides:</strong> Valid for 30 days from purchase</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
@@ -222,8 +222,8 @@ export const RedPassLandingPage: React.FC = () => {
 
               <div className="my-6 pb-6 border-b border-slate-100">
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-4xl font-black text-slate-900">₹3,800</span>
-                  <span className="text-xs font-bold text-slate-400">/ 10 rides</span>
+                  <span className="text-4xl font-black text-slate-900">₹1,140</span>
+                  <span className="text-xs font-bold text-slate-400">/ 3 rides</span>
                 </div>
                 <div className="mt-2 text-xs font-semibold text-emerald-600 bg-emerald-50 inline-block px-2.5 py-1 rounded-md border border-emerald-200">
                   ₹380 effective fare per ride (Save up to 16%)
@@ -233,7 +233,7 @@ export const RedPassLandingPage: React.FC = () => {
               <ul className="space-y-3 text-xs text-slate-600 mb-6">
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span><strong>10 Prepaid Rides:</strong> Valid for current college semester</span>
+                  <span><strong>3 Prepaid Rides:</strong> Valid for current college semester</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
@@ -258,7 +258,7 @@ export const RedPassLandingPage: React.FC = () => {
                   : 'bg-amber-500 hover:bg-amber-600 text-white'
               }`}
             >
-              <span>{isStudentVerified ? 'Purchase Campus Pass (₹3,800)' : 'Verify Student ID to Unlock'}</span>
+              <span>{isStudentVerified ? 'Purchase Campus Pass (₹1,140)' : 'Verify Student ID to Unlock'}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

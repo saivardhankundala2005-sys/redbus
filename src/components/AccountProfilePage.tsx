@@ -101,12 +101,12 @@ export const AccountProfilePage: React.FC = () => {
           </div>
         ) : (
           <div className="text-center py-4">
-            <p className="text-xs text-slate-500 mb-3">You don&apos;t have an active 10-ride pass.</p>
+            <p className="text-xs text-slate-500 mb-3">You don&apos;t have an active 3-ride pass.</p>
             <button
               onClick={() => setActiveTab('red-pass-explore')}
               className="px-4 py-2 bg-redbus-500 text-white font-bold text-xs rounded-xl"
             >
-              Explore Red Pass (10 Rides)
+              Explore Red Pass (3 Rides)
             </button>
           </div>
         )}

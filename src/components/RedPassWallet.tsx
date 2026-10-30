@@ -27,7 +27,7 @@ export const RedPassWallet: React.FC = () => {
         </div>
         <h2 className="text-2xl font-black text-slate-900 mb-2">No Active Red Pass</h2>
         <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-          Prepay 10 rides on your daily corridor, pick your confirmed seat on every bus, and enjoy 1-hour free cancellation and bus swaps.
+          Prepay 3 rides on your daily corridor, pick your confirmed seat on every bus, and enjoy 1-hour free cancellation and bus swaps.
         </p>
         <button
           onClick={() => setActiveTab('red-pass-explore')}
